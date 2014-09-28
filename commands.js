@@ -78,6 +78,11 @@ exports.commands = {
 			this.say(con, room, e.name + ": " + e.message);
 		}
 	},
+	restart: function(arg, by, room, con) {
+		if (!this.hasRank(by, '~&')) return false;
+		this.say(con, room, "/me gets shrek'd ;_;");
+		process.exit();
+	},
 
 	/**
 	 * Room Owner commands
